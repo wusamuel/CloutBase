@@ -6,18 +6,19 @@ const styles = {
     overflow: 'hidden',
     position: 'absolute',
     bottom: 0,
-    top: '60px',
+    top: '50px',
     left: 0,
-    width: '60px',
-    backgroundColor: '#F2F2F2'
+    width: '80px',
+    backgroundColor: '#F2F2F2',
+    borderRight: '1px solid #E5E5E5',
   }
 }
 
-const Sidebar = ({}) => (
+const Sidebar = ({ currentTab }) => (
   <div style={styles.root}>
-    <SidebarButton iconName="inbox" isSelected={true}/>
-    <SidebarButton iconName="users" isSelected={false}/>
-    <SidebarButton iconName="cog" isSelected={false}/>
+    <SidebarButton iconName="inbox" isSelected={currentTab == 'inbox'} link={'/inbox'}/>
+    <SidebarButton iconName="users" isSelected={currentTab == 'contacts'} link={'/contacts'}/>
+    <SidebarButton iconName="cog" isSelected={currentTab == 'settings'} link={'/settings'}/>
   </div>
 )
 

@@ -1,32 +1,39 @@
 import React, { Component } from 'react';
+import ConvoListItem from './ConvoListItem';
+import ConvoView from './ConvoView';
+import { connect } from 'react-redux';
 
 const styles = {
-  root: {
-    overflow: 'hidden',
+  convoList: {
     position: 'absolute',
-    top: '60px',
-    left: '60px',
-    bottom: 0,
-    right: 0
-  },
-  convos: {
     overflowY: 'scroll',
     overflowX: 'hidden',
-    top: '60px',
-    left: '60px',
+    top: '50px',
+    left: '80px',
+    bottom: 0,
+    width: '250px',
+    borderRight: '1px solid #E5E5E5',
   }
 }
 
 class Inbox extends Component {
   render() {
     return (
-      <div style={styles.root}>
-        <div style={styles.convos}>
-
+      <div>
+        <div style={styles.convoList}>
+          {this.props.convoList.map(convo =>
+            <ConvoListItem id={convo.id} isSelected={this.props.convoId == convo.id} name={convo.name} lastMessage={convo.last_message}/>
+          )}
         </div>
+        <ConvoView id={this.props.convoId}/>
       </div>
     );
   }
 }
 
-export default Inbox;
+const mapStateToProps = (state, ownProps) => ({
+  convoList: state.convoList,
+  convoId: ownProps.match.params.id
+})
+
+export default connect(mapStateToProps, null)(Inbox);

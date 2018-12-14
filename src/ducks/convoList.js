@@ -2,17 +2,22 @@ const INIT_STATE = [
   {
     id: 1,
     name: 'Lucy Yu',
-    lastMessage: 'Hey, would you like to hear about our latest promotion?'
+    last_message: 'Hey, would you like to hear about our latest promotion?'
   },
   {
     id: 2,
     name: 'Cathy Tie',
-    lastMessage: 'What time works for you?'
+    last_message: 'What time works for you?'
   },
   {
     id: 3,
     name: 'Samuel Wu',
-    lastMessage: 'Sounds good!'
+    last_message: 'Sounds good!'
+  },
+  {
+    id: 4,
+    name: 'Zheng Tao',
+    last_message: 'Confirmed, thank you.'
   },
 ]
 

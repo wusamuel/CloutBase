@@ -4,3 +4,8 @@
   cursor: pointer;
   box-shadow: 2px 2px 8px #B9B9B9 !important
 }
+
+.convolist-item:hover {
+  cursor: pointer;
+  background-color: #F2F2F2
+}

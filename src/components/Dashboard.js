@@ -2,17 +2,24 @@ import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import Inbox from './Inbox';
+import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
 class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Sidebar/>
+        <Sidebar currentTab={this.props.tab}/>
         <Navbar/>
-        <Inbox/>
+        <Switch>
+          <Route path='/inbox/t/:id' component={Inbox} />
+        </Switch>
       </div>
     );
   }
 }
+const mapStateToProps = (state, ownProps) => ({
+  tab: ownProps.match.params.tab
+})
 
-export default Dashboard;
+export default connect(mapStateToProps, null)(Dashboard);

@@ -9,10 +9,11 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
+    borderBottom: '1px solid #E5E5E5',
   },
   img: {
-    height: '30px',
-    marginTop: '15px',
+    height: '25px',
+    marginTop: '12px',
     marginLeft: '15px'
   }
 }

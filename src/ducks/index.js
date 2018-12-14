@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
-import convos from './convos';
-import convoMessages from './convoMessages'; 
+import convoList from './convoList';
+import convoDetails from './convoDetails';
+import messages from './messages';
+import currentUser from './currentUser';
 
 const appReducer = combineReducers({
-  convos,
-  convoMessages,
+  convoList,
+  convoDetails,
+  messages,
+  currentUser
 })
 
 const rootReducer = (state, action) => {

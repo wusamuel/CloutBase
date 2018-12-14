@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = {
   root: {
@@ -11,8 +12,8 @@ const styles = {
     textAlign: 'center',
     verticalAlign: 'middle',
     fontSize: '22px',
-    marginTop: '10px',
-    marginLeft: '10px',
+    marginTop: '20px',
+    marginLeft: '20px',
     backgroundColor: '#FFFFFF',
     color: '#B9B9B9'
   },
@@ -22,8 +23,10 @@ const styles = {
   }
 }
 
-const SidebarButton = ({ iconName, isSelected }) => (
-  <i className={"sidebar-button fa fa-" + iconName } style={Object.assign({}, styles.root, isSelected? styles.selected: {})}></i>
+const SidebarButton = ({ iconName, isSelected, link }) => (
+  <Link to={link}>
+    <i className={"sidebar-button fa fa-" + iconName } style={Object.assign({}, styles.root, isSelected? styles.selected: {})}></i>
+  </Link>
 )
 
 export default SidebarButton;
