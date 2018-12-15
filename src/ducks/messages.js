@@ -1,15 +1,15 @@
 const INIT_STATE = {
   1: {
     text: 'Hey, would you like to hear about our latest promotion?',
-    sender_id: 1
+    sender_id: 2
   },
   2: {
     text: 'Yeah sure!',
-    sender_id: 2
+    sender_id: 1
   },
   3: {
     text: 'What time works for you?',
-    sender_id: 3
+    sender_id: 2
   },
   4: {
     text: 'What time works for you?',

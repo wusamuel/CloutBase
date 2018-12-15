@@ -1,5 +1,14 @@
 @import '../node_modules/bulma/css/bulma.css';
 
+@font-face {
+  font-family: Lato;
+  src: url('./assets/Lato-Regular.ttf');
+}
+
+body {
+  font-family: 'Lato';
+}
+
 .sidebar-button:hover {
   cursor: pointer;
   box-shadow: 2px 2px 8px #B9B9B9 !important

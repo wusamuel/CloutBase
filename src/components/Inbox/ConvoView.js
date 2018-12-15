@@ -18,7 +18,7 @@ const styles = {
     overflowX: 'hidden',
     top: '100px',
     left: '330px',
-    bottom: '50px',
+    bottom: '60px',
     right: 0
   }
 }

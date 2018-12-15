@@ -8,7 +8,7 @@ const styles = {
     width: '40px',
     height: '40px',
     lineHeight: '40px',
-    borderRadius: '50%',
+    borderRadius: '10%',
     textAlign: 'center',
     verticalAlign: 'middle',
     fontSize: '22px',
