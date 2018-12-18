@@ -3,12 +3,14 @@ import convoList from './convoList';
 import convoDetails from './convoDetails';
 import messages from './messages';
 import currentUser from './currentUser';
+import contacts from './contacts'; 
 
 const appReducer = combineReducers({
   convoList,
   convoDetails,
   messages,
-  currentUser
+  currentUser,
+  contacts
 })
 
 const rootReducer = (state, action) => {
