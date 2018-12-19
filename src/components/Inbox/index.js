@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ConvoListItem from './ConvoListItem';
 import ConvoView from './ConvoView';
 import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
 const styles = {
   convoList: {
@@ -25,7 +26,9 @@ class Inbox extends Component {
             <ConvoListItem id={convo.id} isSelected={this.props.convoId == convo.id} name={convo.name} lastMessage={convo.last_message}/>
           )}
         </div>
-        <ConvoView id={this.props.convoId}/>
+        <Switch>
+          <Route path='/inbox/t/:id' component={ConvoView} />
+        </Switch>
       </div>
     );
   }
@@ -33,7 +36,6 @@ class Inbox extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
   convoList: state.convoList,
-  convoId: ownProps.match.params.id
 })
 
 export default connect(mapStateToProps, null)(Inbox);

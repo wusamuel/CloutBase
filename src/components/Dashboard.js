@@ -14,7 +14,7 @@ class Dashboard extends Component {
         <Sidebar currentTab={this.props.tab}/>
         <Navbar/>
         <Switch>
-          <Route path='/inbox/t/:id' component={Inbox} />
+          <Route path='/inbox' component={Inbox} />
           <Route path='/contacts' component={Contacts} />
         </Switch>
         <ImportContactsFromCSVModal />

@@ -54,10 +54,11 @@ const ConvoView = ({ id, messageIds, messages, convoName, selfSenderId }) => (
 )
 
 const mapStateToProps = (state, ownProps) => ({
-  convoName: state.convoDetails[ownProps.id].name,
-  messageIds: state.convoDetails[ownProps.id].messages,
+  id: ownProps.match.params.id,
+  convoName: state.convoDetails[ownProps.match.params.id].name,
+  messageIds: state.convoDetails[ownProps.match.params.id].messages,
   messages: state.messages,
-  selfSenderId: state.currentUser.sender_id
+  selfSenderId: state.currentUser.sender_id,
 })
 
 export default connect(mapStateToProps, null)(ConvoView);
