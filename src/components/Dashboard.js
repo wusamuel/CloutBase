@@ -4,7 +4,8 @@ import Navbar from './Navbar';
 import Inbox from './Inbox';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import Contacts from './Contacts'; 
+import Contacts from './Contacts';
+import ImportContactsFromCSVModal from './ImportContactsFromCSVModal';
 
 class Dashboard extends Component {
   render() {
@@ -16,6 +17,7 @@ class Dashboard extends Component {
           <Route path='/inbox/t/:id' component={Inbox} />
           <Route path='/contacts' component={Contacts} />
         </Switch>
+        <ImportContactsFromCSVModal />
       </div>
     );
   }
