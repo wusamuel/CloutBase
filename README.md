@@ -6,9 +6,10 @@ cd client/
 yarn start
 ```
 
-# Install server
+# Setup for server
 ```
 From rCloutBase
+pip install -r requirements.txt
 virtualenv server
 ```
 
