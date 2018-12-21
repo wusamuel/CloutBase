@@ -98,7 +98,13 @@ class ImportContactsFromCSVModal extends React.Component {
             </div>
           </div>
         </div>
-          <button class="modal-close is-large" aria-label="close" onClick={() => this.props.closeModal()}></button>
+          <button
+            class="modal-close is-large"
+            aria-label="close"
+            onClick={() => {
+              this.resetFileInput();
+              this.props.closeModal();
+            }}></button>
       </div>);
   }
 }
