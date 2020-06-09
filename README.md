@@ -1,3 +1,15 @@
+This project was a failed attempt at creating a CRM-like tool for car dealerships. 
+Learnings:
+* too small of a market
+* too saturated of a tool space
+* the sell of "if I can give you an X% lift in sales by using our app" isn't all too compelling to users
+* it's not cool to copy ideas, sometimes originally matters
+
+Pivot:
+This eventually led to the development of a telemedicine platform. 
+
+Last updated: 01/01/2020
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
